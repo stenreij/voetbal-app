@@ -1,0 +1,19 @@
+<h1>Clubs</h1>
+
+<div class="container">
+  <div class="grid">
+    <div class="club-list-card" *ngFor="let club of clubs">
+
+      <h3>
+        <a [title]="club.name + ' details'" [routerLink]="['/clubs', club.id]">
+          {{ club.name }}
+        </a>
+      </h3>
+
+      <p *ngIf="club.country"> {{ club.country }}</p>
+
+      <button>Add club</button>
+
+    </div>
+  </div>
+</div>

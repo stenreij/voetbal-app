@@ -1,10 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { ClubListComponent } from './components/club/club-list/club-list.component';
+import { ClubDetailsComponent } from './components/club/club-details/club-details.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+
+
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot([
+      { path: 'clublist', component: ClubListComponent },
+      { path: 'clubs/:clubId', component: ClubDetailsComponent },
+      { path: '', component: HomeComponent },
+      { path: 'about', component: AboutComponent },
+    ])],
+  exports: [
+    RouterModule]
 })
 export class AppRoutingModule { }

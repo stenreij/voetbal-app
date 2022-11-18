@@ -1,1 +1,84 @@
 /* You can add global styles to this file, and also import other style files */
+
+html{
+    background-color: rgb(46, 45, 45);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(46, 45, 45);
+}
+
+/* Navbar */
+app-navbar {
+    width: 100%;
+    height: 85px;
+    background-color: #4d1295;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+app-navbar h1 {
+    color: white;
+    font-size: 32px;
+    margin-left: 70px;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+
+app-navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+app-navbar a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* Footer */
+app-footer {
+    width: 100%;
+    height: 80px;
+    background-color: #4d1295;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+app-footer h1 {
+    color: white;
+    font-size: 32px;
+    text-decoration: none;
+}
+
+app-footer h1:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+app-footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+/* Icons */
+.material-icons.md-48 { 
+    font-size: 48px; 
+    vertical-align: bottom;
+} 
+
+.material-icons.md-60 { 
+    font-size: 60px; 
+    vertical-align: bottom;
+}

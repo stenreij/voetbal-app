@@ -1,0 +1,35 @@
+<h1 [title]="club?.name"></h1>
+
+<div class="container">
+  <div class="">
+
+    <div class="club-list-card" *ngIf="club">
+      <h1>
+        {{ club.name }}
+        <hr>
+      </h1>
+      <div class="grid" *ngIf="club">
+        <h3>
+          Country: {{ club.country }}
+        </h3>
+        <h3>
+          Place: {{ club.place }}
+        </h3>
+        <h3>
+          Stadium: {{ club.stadium }}
+        </h3>
+        <h3>
+          League: {{ club.league}}
+        </h3>
+        <h3>
+          Rating: {{ club.clubRating }}
+        </h3>
+        <h3>
+          WorldRanking: {{ club.ranking }}
+        </h3>
+      </div>
+
+      <button>Add club to favourites</button>
+    </div>
+  </div>
+</div>
