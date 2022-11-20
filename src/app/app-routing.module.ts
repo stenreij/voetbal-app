@@ -7,7 +7,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { FavouritesComponent } from './components/favourites/favourites-list/favourites-list.component';
 import { FavouriteListDetailsComponent } from './components/favourites/favourite-list-details/favourite-list-details.component';
-
+import { UserListComponent } from './components/user/user-list/user-list.component';
+import { UserDetailsComponent } from './components/user/user-details/user-details.component';
 
 
 @NgModule({
@@ -19,6 +20,8 @@ import { FavouriteListDetailsComponent } from './components/favourites/favourite
       { path: 'about', component: AboutComponent },
       { path: 'favourites', component: FavouritesComponent },
       { path: 'favourites/:favouriteId', component: FavouriteListDetailsComponent },
+      { path: 'users', component: UserListComponent },
+      { path: 'users/:userId', component: UserDetailsComponent},
     ])],
   exports: [
     RouterModule]

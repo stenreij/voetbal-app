@@ -1,0 +1,86 @@
+/* Grid */
+.container{
+    align-self: center;
+}
+.grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Card */
+.user-list-card {
+    width: 60%;
+    height: wrap-content;
+    background-color: #3a33439a;
+    border: black 1px solid;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px;
+}
+
+/* Card Header */
+.user-list-card h3 {
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Card Body */
+.user-list-card p {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+/* Hyperlink User Name */
+a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.material-icons {
+    font-size: 80px;
+    margin-right: 0px;
+    width: 80px;
+    padding-right: 100px;
+    padding-left: 0px;
+    vertical-align: middle;
+}
+/* Button */
+button {
+    width: 10%;
+    height: wrap-content;
+    padding: 15px 0px;
+    border-radius: 8px;
+    border: black solid 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #4d1295;
+    color: white;
+    margin: 10px;
+}
+.button:hover,
+button:hover {
+    opacity: 0.7;
+    font-weight: normal;
+}
+.button:disabled,
+button:disabled {
+    opacity: 0.5;
+    cursor: auto;
+}

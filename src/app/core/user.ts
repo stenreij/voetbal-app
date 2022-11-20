@@ -39,10 +39,4 @@ export class User {
 
 }
 
-export const users = [
-    new User(1, 'Pieter', 'p@p.com', 'Pieter123', true),
-    new User(2, 'Klaas', 'k@k.com', 'Klaas123', false),
-
-];
-
 

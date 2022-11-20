@@ -1,0 +1,32 @@
+<h1>Users</h1>
+
+<div class="container">
+    <div class="grid">
+        <button class="button">New User</button>
+        <div class="user-list-card" *ngFor="let user of users">
+            <h3>
+                <a>
+                    <span class="material-icons">person_identity</span>
+                </a>
+                <a>
+                    {{ user.id }}.
+                </a>
+                <a>
+                    {{ user.name }}
+                </a>
+                <a>
+                    {{ user.email }}
+                </a>
+                <a>
+                    <button [title]="user.name + ' details'" [routerLink]="['/users', user.id]">Details</button>
+                </a>
+                <a>
+                    <button type="submit">Edit</button>
+                </a>
+                <a>
+                    <button type="submit">Delete</button>
+                </a>
+            </h3>
+        </div>
+    </div>
+</div>

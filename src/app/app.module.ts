@@ -11,6 +11,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { FavouritesComponent } from './components/favourites/favourites-list/favourites-list.component';
 import { FavouriteListDetailsComponent } from './components/favourites/favourite-list-details/favourite-list-details.component';
+import { UserListComponent } from './components/user/user-list/user-list.component';
+import { UserDetailsComponent } from './components/user/user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { FavouriteListDetailsComponent } from './components/favourites/favourite
     AboutComponent,
     FavouritesComponent,
     FavouriteListDetailsComponent,
+    UserListComponent,
+    UserDetailsComponent,
   ],
   imports: [
     BrowserModule,

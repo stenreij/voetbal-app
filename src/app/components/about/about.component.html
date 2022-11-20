@@ -17,23 +17,19 @@
             <h1>Voetbal-app</h1>
             <p>
                 Met deze app kun je je favoriete voetbalclubs of spelers volgen.
+                Deze kan je toevoegen aan één van de door jouw gemaakte lijsten.
+                Door op de details van de lijst te klikken, kun je de door jouw toegevoegde clubs
+                en/of spelers zien.
                 In de lijst met clubs en spelers kan je zoeken naar jouw favoriete club/speler.
-                Deze kan je dan toevoegen aan je favorieten, via het menu kan je je favorieten bekijken die jij
-                toegevoegt
-                hebt.
-                Als gebruiker is het ook mogelijk om je vrienden toe te voegen.
-
+                Als gebruiker is het ook mogelijk om andere gebruikers toe te voegen als vriend.
+                Je kunt alle gebruikers zien, in de lijst met gebruikers.
             </p>
         </div>
     </div>
 
     <h3>Entiteiten</h3>
-    <p>
-        Hier geef je een toelichting op je entiteiten. Voeg ook een afbeelding van
-        je model toe zoals dat bij NoSql gevraagd wordt.
-    </p>
 
-    <img src="assets/images/erd.png" class="px-5 py-5" alt="..." />
+    <img src="assets/CasusBeschrijvingV3.png" class="px-5 py-5" alt="..." />
 
     <div class="row">
         <div class="col-sm-12 col-md-4">
@@ -45,6 +41,7 @@
                 <li>password: string</li>
                 <li>friends: User[]</li>
                 <li>favorieten: Favoriet[]</li>
+                <li>isAdmin: boolean</li>
             </ul>
         </div>
         <div class="col-sm-12 col-md-4">
@@ -129,18 +126,12 @@
                             zodat ik mijn favorieten kan verwijderen als ik een club/speler niet meer
                             in mijn favorietenlijst wil hebben.
                         </td>
-                    </tr>
+                    </tr>                  
                     <tr>
                         <td class="td-css">6</td>
-                        <td class="td-underlined">
+                        <td>
                             Als gebruiker wil ik mijn vrienden kunnen toevoegen, ook wil ik als gebruiker
                             de mogelijkheid hebben om mijn vriendenlijst te bekijken en aan te passen.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="td-css">7</td>
-                        <td>
-                            **Voeg zelf meer userstories toe.**
                         </td>
                     </tr>
                 </tbody>
