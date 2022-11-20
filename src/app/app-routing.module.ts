@@ -5,6 +5,7 @@ import { ClubListComponent } from './components/club/club-list/club-list.compone
 import { ClubDetailsComponent } from './components/club/club-details/club-details.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
+import { FavouritesComponent } from './components/favourites/favourites.component';
 
 
 
@@ -15,6 +16,7 @@ import { AboutComponent } from './components/about/about.component';
       { path: 'clubs/:clubId', component: ClubDetailsComponent },
       { path: '', component: HomeComponent },
       { path: 'about', component: AboutComponent },
+      { path: 'favourites', component: FavouritesComponent },
     ])],
   exports: [
     RouterModule]

@@ -9,6 +9,7 @@ import { ClubListComponent } from './components/club/club-list/club-list.compone
 import { ClubDetailsComponent } from './components/club/club-details/club-details.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
+import { FavouritesComponent } from './components/favourites/favourites.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AboutComponent } from './components/about/about.component';
     FooterComponent,
     HomeComponent,
     AboutComponent,
+    FavouritesComponent,
   ],
   imports: [
     BrowserModule,
