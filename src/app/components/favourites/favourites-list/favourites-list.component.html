@@ -1,0 +1,13 @@
+<h1>Favourites</h1>
+
+<div class="container">
+    <div class="grid">
+        <div class="favourite-list-card" *ngFor="let favouritesList of favouritesList">
+            <h3>
+                <a [title]="favouritesList.name + ' details'" [routerLink]="['/favourites', favouritesList.id]">
+                    {{ favouritesList.name }}
+                </a>
+            </h3>
+        </div>
+    </div>
+</div>

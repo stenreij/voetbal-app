@@ -12,8 +12,15 @@
 
       <p *ngIf="club.country"> {{ club.country }}</p>
 
-      <button>Add club</button>
-
+      <div class="button-thingy">
+        <select class="form-select">
+          <option selected>Favourite List</option>
+          <div *ngFor="let favourites for favourites">
+            <option>{{favourites.favourites}}</option>
+          </div>
+        </select>
+        <button>Add club</button>
+      </div>
     </div>
   </div>
 </div>

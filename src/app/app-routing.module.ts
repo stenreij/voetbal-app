@@ -5,7 +5,8 @@ import { ClubListComponent } from './components/club/club-list/club-list.compone
 import { ClubDetailsComponent } from './components/club/club-details/club-details.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
-import { FavouritesComponent } from './components/favourites/favourites.component';
+import { FavouritesComponent } from './components/favourites/favourites-list/favourites-list.component';
+import { FavouriteListDetailsComponent } from './components/favourites/favourite-list-details/favourite-list-details.component';
 
 
 
@@ -17,6 +18,7 @@ import { FavouritesComponent } from './components/favourites/favourites.componen
       { path: '', component: HomeComponent },
       { path: 'about', component: AboutComponent },
       { path: 'favourites', component: FavouritesComponent },
+      { path: 'favourites/:favouriteId', component: FavouriteListDetailsComponent },
     ])],
   exports: [
     RouterModule]
