@@ -85,7 +85,7 @@ p{
     text-align: center;
 }
 .form-select {
-    width: 100%;
+    width: 180%;
     height: 100%;
     padding: 12px 20px;
     color: white;
@@ -99,6 +99,7 @@ p{
 }
 .form-select:focus {
     outline: none;
+    border: 2px solid rgb(91, 136, 170);
 }
 
 .button-thingy{
@@ -109,4 +110,13 @@ p{
     border: 1px solid black;
     border-radius: 8px;
     background-color: rgba(52, 13, 103, 0.295);
+}
+.option-item{
+    background-color: rgba(0, 0, 0, 0.732);
+    border: none;
+}
+.option:hover{   
+    background-color: rgba(252, 21, 21, 0.932);
+    border: none;
+    
 }

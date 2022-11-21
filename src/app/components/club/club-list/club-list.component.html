@@ -3,21 +3,17 @@
 <div class="container">
   <div class="grid">
     <div class="club-list-card" *ngFor="let club of clubs">
-
       <h3>
         <a [title]="club.name + ' details'" [routerLink]="['/clubs', club.id]">
           {{ club.name }}
         </a>
       </h3>
 
-      <p *ngIf="club.country"> {{ club.country }}</p>
+      <p *ngIf="club.country">{{ club.country }}</p>
 
       <div class="button-thingy">
         <select class="form-select">
-          <option selected>Fav. List</option>
-          <div *ngFor="let favourites for favourites">
-            <option>{{favourites.favourites}}</option>
-          </div>
+          <option class="option-item" *ngFor="let f of favouritesList">{{ f.name }}</option>
         </select>
         <button>Add club</button>
       </div>

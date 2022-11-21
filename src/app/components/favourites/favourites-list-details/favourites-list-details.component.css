@@ -1,89 +1,75 @@
-/* Grid */
-
+/* Card */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+    display: flex;
+    align-content: center;
+    width: 100%;
     align-content: center;
     justify-content: center;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-
-  /* Card */
-.item-list-card {
+}
+.favourites-list-card {
     width: 70%;
-    height: auto;  
+    height: wrap-content;
     background-color: #3a33439a;
     border: black 1px solid;
     border-radius: 10px;
-    padding: 25px;
-    margin: 25px;
+    padding: 15px;
+    margin: 50px;
 }
-
 /* Card Header */
-.item-list-card h1 {
-    text-align: center;
-    font-size: 50px;
-    vertical-align: middle;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.item-list-card h3 {
+.favourites-list-card h3 {
     text-align: center;
     font-size: 24px;
-    vertical-align: middle;
 }
-
-/* Hyperlink Item List */
+/* Card Body */
+.user-list-card p {
+    text-align: center;
+    font-size: 16px;
+}
+/* Hyperlink FavouritesList */
 a {
     cursor: pointer;
     color: white;
     text-align: center;
     text-decoration: none;
-  }
-  
-  a:hover {
+}
+a:hover {
     opacity: 0.8;
-    text-decoration: underline;
-  }
-
+}
 /* Button */
 button {
-    width: 50%;
-    margin: auto;
-    display: flex;
+    width: 20%;
     justify-content: center;
-    padding: 8px 16px;
-    border-radius: 7px;
+    margin: auto;
+    padding: 35px 0px;
+    border-radius: 8px;
     border: black solid 1px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 24px;
     cursor: pointer;
     background-color: #4d1295;
     color: white;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
 }
-
 .button:hover,
 button:hover {
     opacity: 0.7;
     font-weight: normal;
 }
-
 .button:disabled,
 button:disabled {
     opacity: 0.5;
     cursor: auto;
 }
-
 h1 {
     text-align: center;
-    font-size: 60px;
-    margin-bottom: 30px;
 }
-
-p{
+p {
     text-align: center;
+}
+hr {
+    border: 1px solid #4d1295;
 }

@@ -6,10 +6,9 @@ import { ClubDetailsComponent } from './components/club/club-details/club-detail
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { FavouritesComponent } from './components/favourites/favourites-list/favourites-list.component';
-import { FavouriteListDetailsComponent } from './components/favourites/favourite-list-details/favourite-list-details.component';
+import { FavouritesListDetailsComponent } from './components/favourites/favourites-list-details/favourites-list-details.component';
 import { UserListComponent } from './components/user/user-list/user-list.component';
 import { UserDetailsComponent } from './components/user/user-details/user-details.component';
-
 
 @NgModule({
   imports: [
@@ -19,7 +18,7 @@ import { UserDetailsComponent } from './components/user/user-details/user-detail
       { path: '', component: HomeComponent },
       { path: 'about', component: AboutComponent },
       { path: 'favourites', component: FavouritesComponent },
-      { path: 'favourites/:favouriteId', component: FavouriteListDetailsComponent },
+      { path: 'favourites/:favouriteListId', component: FavouritesListDetailsComponent },
       { path: 'users', component: UserListComponent },
       { path: 'users/:userId', component: UserDetailsComponent},
     ])],

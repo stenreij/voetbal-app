@@ -21,7 +21,7 @@
 
 /* Card Header */
 .club-list-card h3 {
-    text-align: center;
+    text-align: left;
     font-size: 24px;
 }
 
@@ -33,34 +33,28 @@
     margin-bottom: 25px;
 }
 
-/* Hyperlink Club Name */
+/* Favourites List Name */
 a {
-    cursor: pointer;
     color: white;
     text-align: center;
     text-decoration: none;
+    font-size: 24px;
   }
-  
-  a:hover {
-    opacity: 0.8;
-    text-decoration: underline;
-  }
+
 
 /* Button */
 button {
-    width: 50%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    padding: 8px 16px;
-    border-radius: 7px;
+    width: 10%;
+    height: wrap-content;
+    padding: 15px 0px;
+    border-radius: 8px;
     border: black solid 1px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     cursor: pointer;
     background-color: #4d1295;
     color: white;
-    margin-bottom: 20px;
+    margin: 10px;
 }
 
 .button:hover,

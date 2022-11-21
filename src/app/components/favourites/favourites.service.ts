@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { FavouritesList } from 'src/app/core/favouritesList';
-import { Favourites } from 'src/app/core/favourites';
 
 @Injectable({
     providedIn: 'root',
@@ -9,11 +8,11 @@ import { Favourites } from 'src/app/core/favourites';
 export class FavouritesService {
 
     favouritesList = [
-        new FavouritesList('Favourites 1', 1),
-        new FavouritesList('Favourites 2', 2),
-        new FavouritesList('Favourites 3', 3),
+        new FavouritesList('Favourites 1', 1, 'Favourites 1 description'),
+        new FavouritesList('Favourites 2', 2, 'Favourites 2 description'),
+        new FavouritesList('Favourites 3', 3, 'Favourites 3 description'),
+        new FavouritesList('Favourites 4', 4, 'Favourites 4 description'),
     ]
-
 
     constructor() {
 
@@ -22,14 +21,17 @@ export class FavouritesService {
     getFavouritesList() {
         return this.favouritesList;
     }
-    addFavourite(favourite: FavouritesList) {
+    getFavoritesListById(id: number) {
+        return this.favouritesList.find(f => f.id === id);
+    }
+    addFavouritesList(favourite: FavouritesList) {
         this.favouritesList.push(favourite);
     }
-    deleteFavourite(favourite: FavouritesList) {
+    deleteFavouritesList(favourite: FavouritesList) {
         const index = this.favouritesList.indexOf(favourite);
         this.favouritesList.splice(index, 1);
     }
-    editFavourite(favourite: FavouritesList) {
+    editFavouritesList(favourite: FavouritesList) {
         const index = this.favouritesList.indexOf(favourite);
         this.favouritesList[index] = favourite;
     }

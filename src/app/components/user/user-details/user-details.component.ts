@@ -12,7 +12,6 @@ export class UserDetailsComponent implements OnInit {
   UserService: UserService = new UserService;
   User = this.UserService.getUsers();
   selectedUser: User | undefined;
-  
 
   ngOnInit(): void {
     const routeParams = this.route.snapshot.paramMap;
@@ -21,9 +20,7 @@ export class UserDetailsComponent implements OnInit {
     this.selectedUser = this.UserService.users.find(user => user.id === userIdFromRoute);
   }
 
-
- constructor(
+  constructor(
     private route: ActivatedRoute,
   ) { }
- 
 }
