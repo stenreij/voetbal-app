@@ -9,13 +9,13 @@
                     {{ favouritesList.name }}
                 </a>
                 <a>
-                    <button [title]="favouritesList.name + ' details'" [routerLink]="['/users', favouritesList.id]">Details</button>
+                    <button [title]="favouritesList.name + ' details'" [routerLink]="['/favourites', favouritesList.id]">Details</button>
                 </a>
                 <a>
                     <button type="submit">Edit</button>
                 </a>
                 <a>
-                    <button type="submit">Delete</button>
+                    <button (click)="deleteFavouritesList(favouritesList)">Delete</button>
                 </a>
             </h3>
         </div>

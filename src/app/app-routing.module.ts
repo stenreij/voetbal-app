@@ -5,8 +5,8 @@ import { ClubListComponent } from './components/club/club-list/club-list.compone
 import { ClubDetailsComponent } from './components/club/club-details/club-details.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
-import { FavouritesComponent } from './components/favourites/favourites-list/favourites-list.component';
-import { FavouritesListDetailsComponent } from './components/favourites/favourites-list-details/favourites-list-details.component';
+import { FavouritesComponent } from './components/favourites-list/favourites-list/favourites-list.component';
+import { FavouritesListDetailsComponent } from './components/favourites-list/favourites-list-details/favourites-list-details.component';
 import { UserListComponent } from './components/user/user-list/user-list.component';
 import { UserDetailsComponent } from './components/user/user-details/user-details.component';
 

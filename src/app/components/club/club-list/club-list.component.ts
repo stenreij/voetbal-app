@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { clubs } from '../../../core/clubs'; 
-import { FavouritesService } from '../../favourites/favourites.service';
+import { FavouritesList } from 'src/app/core/favouritesList';
+import { Club } from 'src/app/core/clubs';
+import { ClubsService } from '../clubs.service';
+import { FavouritesListService } from '../../favourites-list/favourites-list.service';
 
 @Component({
   selector: 'app-club-list',
@@ -8,14 +10,19 @@ import { FavouritesService } from '../../favourites/favourites.service';
   styleUrls: ['./club-list.component.css']
 })
 export class ClubListComponent implements OnInit {
-  clubs = clubs;
-  favouritesService: FavouritesService = new FavouritesService();
-  favouritesList = this.favouritesService.favouritesList;
+  clubs: Club[] = [];
+  favourites : FavouritesList[] = [];
 
-  constructor() { }
+  constructor(
+    private favouritesListService: FavouritesListService, private clubsService: ClubsService) 
+   { }
 
   ngOnInit(): void {
+    this.favourites = this.favouritesListService.getFavouritesList();
+    this.clubs = this.clubsService.getClubs();
   }
 
+  addClub(club: Club) {
 
+  }
 }

@@ -4,12 +4,12 @@ import { Player } from "./players";
 
 export class Favourites {
     name: Club["name"] | Player["playerName"] | undefined;
-    id: Club["id"] | Player["id"] | undefined;
-    description: string;
+    id: number;
+    favouriteId: Club["id"] | Player["id"] | undefined;
 
-    constructor(name: Club["name"] | Player["playerName"] | undefined, id: Club["id"] | Player["id"] | undefined, description: string) {
+    constructor(name: Club["name"] | Player["playerName"] | undefined, id: number ,favouriteId: Club["id"] | Player["id"] | undefined) {
         this.name = name;
         this.id = id;
-        this.description = description;
+        this.favouriteId = favouriteId;       
     }
 }

@@ -1,35 +1,42 @@
-<h1 [title]="club?.name"></h1>
+<h1 [title]="selectedClub?.name"></h1>
 
 <div class="container">
   <div class="grid">
 
-    <div class="club-list-card" *ngIf="club">
+    <div class="club-list-card" *ngIf="selectedClub">
       <h1>
-        {{ club.name }}
+        {{ selectedClub.name }}
+
         <hr>
       </h1>
-      <div class="grid-elements" *ngIf="club">
+      <div class="grid-elements" *ngIf="selectedClub">
         <h3>
-          Country: {{ club.country }}
+          Country: {{ selectedClub.country }}
         </h3>
         <h3>
-          Place: {{ club.place }}
+          Place: {{ selectedClub.place }}
         </h3>
         <h3>
-          Stadium: {{ club.stadium }}
+          Stadium: {{ selectedClub.stadium }}
         </h3>
         <h3>
-          League: {{ club.league}}
+          League: {{ selectedClub.league}}
         </h3>
         <h3>
-          Rating: {{ club.clubRating }}
+          Rating: {{ selectedClub.clubRating }}
         </h3>
         <h3>
-          WorldRanking: {{ club.ranking }}
+          WorldRanking: {{ selectedClub.ranking }}
         </h3>
       </div>
-
-      <button>Add club to favourites</button>
+      <div class="button-thingy">
+        <select class="form-select">
+          <option class="option-item" *ngFor="let f of favourites" [value]="f.id">
+            {{ f.name }}
+          </option>
+        </select>
+        <button>Add club</button>
+      </div>
     </div>
   </div>
 </div>

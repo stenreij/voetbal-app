@@ -84,6 +84,7 @@ h1 {
 p{
     text-align: center;
 }
+/* Button + Form Looks  */
 .form-select {
     width: 180%;
     height: 100%;
@@ -117,6 +118,5 @@ p{
 }
 .option:hover{   
     background-color: rgba(252, 21, 21, 0.932);
-    border: none;
-    
+    border: none;  
 }
