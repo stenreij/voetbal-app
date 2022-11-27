@@ -13,6 +13,10 @@ import { FavouritesComponent } from './components/favourites-list/favourites-lis
 import { FavouritesListDetailsComponent } from './components/favourites-list/favourites-list-details/favourites-list-details.component';
 import { UserListComponent } from './components/user/user-list/user-list.component';
 import { UserDetailsComponent } from './components/user/user-details/user-details.component';
+import { FavouritesListUpdateComponent } from './components/favourites-list/favourites-list-update/favourites-list-update.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FavouritesListAddFormComponent } from './components/favourites-list/favourites-list-add-form/favourites-list-add-form.component';
+
 
 @NgModule({
   declarations: [
@@ -27,10 +31,13 @@ import { UserDetailsComponent } from './components/user/user-details/user-detail
     FavouritesListDetailsComponent,
     UserListComponent,
     UserDetailsComponent,
+    FavouritesListUpdateComponent,
+    FavouritesListAddFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule
 
   ],
   bootstrap: [AppComponent]

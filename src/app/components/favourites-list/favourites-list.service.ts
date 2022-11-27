@@ -13,7 +13,7 @@ export class FavouritesListService {
         new FavouritesList('Favourites 2', 2, 'Favourites 2 description'),
         new FavouritesList('Favourites 3', 3, 'Favourites 3 description'),
         new FavouritesList('Favourites 4', 4, 'Favourites 4 description'),
-        new FavouritesList('Favourites 5', 5, 'Favourites 5 description'),
+        new FavouritesList('Favourites 500', 5, 'Favourites 5 description'),
     ]
 
     constructor() {
@@ -33,9 +33,8 @@ export class FavouritesListService {
         this.favouritesList.splice(this.favouritesList.indexOf(favList), 1);
     }
 
-    
-    editFavouritesList(favourite: FavouritesList) {
-        const index = this.favouritesList.indexOf(favourite);
-        this.favouritesList[index] = favourite;
+    updateFavouritesList(favList: FavouritesList): void {
+        const index = this.favouritesList.indexOf(favList);
+        this.favouritesList[index] = favList;
     }
 }

@@ -5,7 +5,7 @@ import { FavouritesList } from 'src/app/core/favouritesList';
 @Component({
   selector: 'app-favourites',
   templateUrl: './favourites-list.component.html',
-  styleUrls: ['./favourites-list.component.css']
+  styleUrls: ['./favourites-list.component.css'],
 })
 export class FavouritesComponent implements OnInit {
   favourites: FavouritesList[] = [];

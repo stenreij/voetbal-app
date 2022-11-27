@@ -7,7 +7,6 @@
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
-
   /* Card */
 .favourite-list-card {
     width: 60%;
@@ -18,33 +17,26 @@
     padding: 15px;
     margin: 15px;
 }
-
 /* Card Header */
-.club-list-card h3 {
-    text-align: left;
+.favourites-list-card h3 {
     font-size: 24px;
+    padding-left: 50px;
 }
-
 /* Card Body */
-.club-list-card p {
+.favourites-list-card p {
     text-align: center;
     font-size: 16px;
     margin-top: 15px;
     margin-bottom: 25px;
 }
-
-/* Favourites List Name */
 a {
     color: white;
-    text-align: center;
     text-decoration: none;
-    font-size: 24px;
-  }
-
-
+    margin: 15px;
+}
 /* Button */
 button {
-    width: 10%;
+    width: 12%;
     height: wrap-content;
     padding: 15px 0px;
     border-radius: 8px;
@@ -75,4 +67,12 @@ h1 {
 
 p{
     text-align: center;
+}
+.material-icons {
+    font-size: 80px;
+    margin-right: 0px;
+    width: 80px;
+    padding-right: 75px;
+    padding-left: 0px;
+    vertical-align: middle;
 }

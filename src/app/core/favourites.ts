@@ -3,11 +3,11 @@ import { FavouritesList } from "./favouritesList";
 import { Player } from "./players";
 
 export class Favourites {
-    name: Club["name"] | Player["playerName"] | undefined;
+    name: string;
     id: number;
-    favouriteId: Club["id"] | Player["id"] | undefined;
+    favouriteId: number;
 
-    constructor(name: Club["name"] | Player["playerName"] | undefined, id: number ,favouriteId: Club["id"] | Player["id"] | undefined) {
+    constructor(name: string, id: number, favouriteId: number) {
         this.name = name;
         this.id = id;
         this.favouriteId = favouriteId;       

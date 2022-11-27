@@ -1,0 +1,23 @@
+<h1>Add Favourites List</h1>
+
+<div class="container">
+    <div class="grid">
+        <div class="favourites-list-card">
+            <form class="form-list" (ngSubmit)="submit()">
+                <div class="form-list-items">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" />
+                </div>
+                <div class="form-list-items">
+                    <label for="description">Description: </label>
+                    <textarea type="text" name="description"></textarea>
+                </div>
+                <div class="button-class">
+                    <button type="submit" [routerLink]="['/favouriteslist']">
+                        Add Favourites List
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

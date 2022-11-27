@@ -1,0 +1,34 @@
+<h1 [title]="selectedFavouritesList?.name"></h1>
+
+<div class="container">
+  <div class="grid">
+    <div class="favourites-list-card" *ngIf="selectedFavouritesList">
+      <h1>
+        {{ selectedFavouritesList.name }}
+        <div class="button-grid">
+          <button (click)="deleteFavouritesList(selectedFavouritesList)" [routerLink]="['/favouriteslist']">
+            Delete List
+          </button>
+        </div>
+        <hr />
+      </h1>
+      <form class="form-list" #favourites >
+        <div class="form-list-items">
+          <label for="name">Name: </label>
+          <input type="text" id="name" placeholder={{selectedFavouritesList.name}}
+            [formControl]="favouritesListControl" />
+        </div>
+        <div class="form-list-items">
+          <label for="description">Description: </label>
+          <input type="text" id="description" placeholder={{selectedFavouritesList.description}}
+            [formControl]="favouritesListControl" />
+        </div>
+        <div class="button-class">
+          <button type="submit" (click)="updateFavouritesList(selectedFavouritesList)" [routerLink]="['/favouriteslist']">
+            Update List
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

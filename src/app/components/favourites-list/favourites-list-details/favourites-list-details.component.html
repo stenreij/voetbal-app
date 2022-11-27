@@ -6,8 +6,8 @@
       <h1>
         {{ selectedFavouritesList.name }}
         <div class="button-grid">
-          <button>Edit List Info</button>
-          <button (click)="deleteFavouritesList(selectedFavouritesList)" [routerLink]="['/favourites']">
+          <button [routerLink]="['/favouriteslist', selectedFavouritesList.id, 'update']">Edit List Info</button>
+          <button (click)="deleteFavouritesList(selectedFavouritesList)" [routerLink]="['/favouriteslist']">
             Delete List
           </button>
         </div>
@@ -18,11 +18,11 @@
         <h3>Name: {{ selectedFavouritesList.name }}</h3>
         <h3>Description: {{ selectedFavouritesList.description }}</h3>
       </div>
-      <div class="grid-elements" *ngIf="selectedFavouritesList">
+      <div class="grid-elements">
         <div class="favourites-list-card" *ngFor="let favourite of selectedFavouritesList.favourites">
           <h1>
             {{ favourite }}
-            <div class="button-grid">
+            <div>
               <button>Edit favourite info</button>
               <button (click)="(favourite)">Delete</button>
             </div>

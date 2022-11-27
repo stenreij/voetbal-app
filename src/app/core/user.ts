@@ -36,7 +36,6 @@ export class User {
     getFriend(id: number) {
         return this.friends.find(friend => friend.id === id);
     }
-
 }
 
 
