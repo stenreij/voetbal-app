@@ -2,14 +2,16 @@
 
 <div class="container">
     <div class="grid">
-        <button class="button">New User</button>
+        <button class="main-button" [routerLink]="['/users/add/form']">New User</button>
         <div class="user-list-card" *ngFor="let user of users">
             <h3>
                 <a>
                     <span class="material-icons">person_identity</span>
                 </a>
+            </h3>
+            <h3>
                 <a>
-                    {{ user.id }}.
+                    {{ user.id }}
                 </a>
                 <a>
                     {{ user.name }}
@@ -17,11 +19,13 @@
                 <a>
                     {{ user.email }}
                 </a>
+            </h3>
+            <h3 class="button-items">
                 <a>
                     <button [title]="user.name + ' details'" [routerLink]="['/users', user.id]">Details</button>
                 </a>
                 <a>
-                    <button type="submit">Edit</button>
+                    <button [routerLink]="['/users', user.id, 'update']">Edit</button>
                 </a>
                 <a>
                     <button (click)="deleteUser(user)">Delete</button>

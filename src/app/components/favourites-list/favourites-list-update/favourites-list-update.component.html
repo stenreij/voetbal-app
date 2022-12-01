@@ -12,23 +12,23 @@
         </div>
         <hr />
       </h1>
-      <form class="form-list" #favourites >
+
+      <form class="form-list" [formGroup]="favouritesListUpdateForm">
         <div class="form-list-items">
-          <label for="name">Name: </label>
-          <input type="text" id="name" placeholder={{selectedFavouritesList.name}}
-            [formControl]="favouritesListControl" />
+          <label for="listName">Name: </label>
+          <input id="listName" type="text" formControlName="listName" placeholder="{{selectedFavouritesList.name}}"/>  
         </div>
         <div class="form-list-items">
           <label for="description">Description: </label>
-          <input type="text" id="description" placeholder={{selectedFavouritesList.description}}
-            [formControl]="favouritesListControl" />
+          <textarea id="description" type="text" formControlName="description" [(ngModel)]="selectedFavouritesList!.description" value={{selectedFavouritesList.description}}></textarea>
         </div>
         <div class="button-class">
-          <button type="submit" (click)="updateFavouritesList(selectedFavouritesList)" [routerLink]="['/favouriteslist']">
+          <button type="submit" (click)="onSubmit()" [routerLink]="['/favouriteslist']">
             Update List
           </button>
         </div>
       </form>
+
     </div>
   </div>
 </div>

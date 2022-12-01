@@ -27,22 +27,22 @@ app-navbar {
 app-navbar h1 {
     color: white;
     font-size: 32px;
-    margin-left: 70px;
+    margin-left: 60px;
     text-decoration: none;
     vertical-align: middle;
+    cursor: pointer
 }
 
+app-navbar h1:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
 
 app-navbar a {
     color: white;
     text-decoration: none;
     font-size: 24px;
     margin-left: 20px;
-}
-
-app-navbar a:hover {
-    opacity: 0.8;
-    text-decoration: underline;
 }
 
 /* Footer */

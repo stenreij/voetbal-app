@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,8 +15,9 @@ import { FavouritesListDetailsComponent } from './components/favourites-list/fav
 import { UserListComponent } from './components/user/user-list/user-list.component';
 import { UserDetailsComponent } from './components/user/user-details/user-details.component';
 import { FavouritesListUpdateComponent } from './components/favourites-list/favourites-list-update/favourites-list-update.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { FavouritesListAddFormComponent } from './components/favourites-list/favourites-list-add-form/favourites-list-add-form.component';
+import { UserUpdateComponent } from './components/user/user-update/user-update.component';
+import { UserAddFormComponent } from './components/user/user-add-form/user-add-form.component';
 
 
 @NgModule({
@@ -33,6 +35,8 @@ import { FavouritesListAddFormComponent } from './components/favourites-list/fav
     UserDetailsComponent,
     FavouritesListUpdateComponent,
     FavouritesListAddFormComponent,
+    UserUpdateComponent,
+    UserAddFormComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { FavouritesList } from 'src/app/core/favouritesList';
 import { FavouritesListService } from '../favourites-list.service';
@@ -15,6 +15,11 @@ export class FavouritesListUpdateComponent implements OnInit {
 
   favouritesList: FavouritesList[] = [];
   selectedFavouritesList: FavouritesList | undefined;
+
+  favouritesListUpdateForm = new FormGroup({
+    listName: new FormControl(),
+    description: new FormControl(),
+  });
 
   ngOnInit(): void {
     const routeParams = this.route.snapshot.paramMap;
@@ -32,9 +37,11 @@ export class FavouritesListUpdateComponent implements OnInit {
   deleteFavouritesList(favourite: FavouritesList) {
     this.FavouritesListService.deleteFavouritesList(favourite);
   }
-  
-  updateFavouritesList(favourite: FavouritesList) {
-    this.FavouritesListService.updateFavouritesList(favourite);
+
+  onSubmit() {
+    this.selectedFavouritesList!.name = this.favouritesListUpdateForm.value.listName;
+    this.selectedFavouritesList!.description = this.favouritesListUpdateForm.value.description;
+    this.FavouritesListService.updateFavouritesList(this.selectedFavouritesList!);
   }
 
 }

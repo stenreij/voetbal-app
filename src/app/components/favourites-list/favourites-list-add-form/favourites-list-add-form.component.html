@@ -3,21 +3,23 @@
 <div class="container">
     <div class="grid">
         <div class="favourites-list-card">
-            <form class="form-list" (ngSubmit)="submit()">
+
+            <form [formGroup]="favouritesListForm" class="form-list">
                 <div class="form-list-items">
-                    <label for="name">Name: </label>
-                    <input type="text" name="name" />
+                    <label for="listName">Name: </label>
+                    <input id="listName" type="text" formControlName="listName" />
                 </div>
                 <div class="form-list-items">
                     <label for="description">Description: </label>
-                    <textarea type="text" name="description"></textarea>
+                    <textarea id="description" type="text" formControlName="description"></textarea>
                 </div>
                 <div class="button-class">
-                    <button type="submit" [routerLink]="['/favouriteslist']">
+                    <button type="button" (click)="addFavouritesList()" [routerLink]="['/favouriteslist']">
                         Add Favourites List
                     </button>
                 </div>
             </form>
+
         </div>
     </div>
 </div>

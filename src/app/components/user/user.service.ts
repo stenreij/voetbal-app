@@ -23,7 +23,7 @@ export class UserService {
             this.users.splice(index, 1);
         }
     }
-    getUser(id: number) {
+    getUser(id: number){
         return this.users.find(user => user.id === id);
     }
     addUser(user: User) {

@@ -8,17 +8,22 @@
     justify-content: center;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
+}
 
-  /* Card */
+/* Card */
 .item-list-card {
+    cursor: pointer;
     width: 70%;
-    height: auto;  
+    height: auto;
     background-color: #3a33439a;
     border: black 1px solid;
     border-radius: 10px;
     padding: 25px;
     margin: 25px;
+}
+
+.item-list-card:hover {
+    background-color: #3e3649;
 }
 
 /* Card Header */
@@ -38,16 +43,10 @@
 
 /* Hyperlink Item List */
 a {
-    cursor: pointer;
     color: white;
     text-align: center;
     text-decoration: none;
-  }
-  
-  a:hover {
-    opacity: 0.8;
-    text-decoration: underline;
-  }
+}
 
 /* Button */
 button {
@@ -84,6 +83,6 @@ h1 {
     margin-bottom: 30px;
 }
 
-p{
+p {
     text-align: center;
 }

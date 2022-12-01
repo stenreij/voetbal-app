@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+import { FavouritesListService } from '../favourites-list.service';
 
 @Component({
   selector: 'app-favourites-list-add-form',
@@ -6,14 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./favourites-list-add-form.component.css']
 })
 export class FavouritesListAddFormComponent implements OnInit {
+  
+  favouritesListForm = new FormGroup({
+    listName: new FormControl(),
+    description: new FormControl(),
+  });
 
-  constructor() { }
+  constructor(private favouritesListService: FavouritesListService) { }
 
   ngOnInit(): void {
   }
 
-  submit(){
-    console.log('submit');
-  }
-
+  addFavouritesList() {
+    this.favouritesListService.addFavouritesList(this.favouritesListForm.value.listName, this.favouritesListForm.value.description);
+  } 
 }

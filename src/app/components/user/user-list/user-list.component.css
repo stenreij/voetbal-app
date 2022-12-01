@@ -1,7 +1,4 @@
 /* Grid */
-.container{
-    align-self: center;
-}
 .grid {
     display: grid;
     width: 100%;
@@ -9,10 +6,12 @@
     justify-items: center;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-/* Card */
+    text-align: center;
+  }
+  /* Card */
 .user-list-card {
+    display: grid;
+    grid-template-columns: min-content 2fr 3fr;
     width: 60%;
     height: wrap-content;
     background-color: #3a33439a;
@@ -20,48 +19,29 @@
     border-radius: 10px;
     padding: 15px;
     margin: 15px;
+    align-items: center;
 }
-
 /* Card Header */
 .user-list-card h3 {
-    text-align: left;
     font-size: 24px;
-    padding-left: 50px;
+    text-align: left;
 }
-
 /* Card Body */
-.user-list-card p {
-    text-align: center;
-    font-size: 16px;
-    margin-top: 15px;
-    margin-bottom: 25px;
-}
 a {
     color: white;
-    text-align: center;
     text-decoration: none;
     margin: 15px;
+    text-align: center;
 }
-
 h1 {
     text-align: center;
 }
-
-p {
-    text-align: center;
-}
-
-.material-icons {
-    font-size: 80px;
-    margin-right: 0px;
-    width: 80px;
-    padding-right: 75px;
-    padding-left: 0px;
-    vertical-align: middle;
-}
 /* Button */
+.main-button{
+    width: 12%;
+}
 button {
-    width: 10%;
+    width: 20%;
     height: wrap-content;
     padding: 15px 0px;
     border-radius: 8px;
@@ -71,7 +51,6 @@ button {
     cursor: pointer;
     background-color: #4d1295;
     color: white;
-    margin: 10px;
 }
 .button:hover,
 button:hover {
@@ -82,4 +61,10 @@ button:hover {
 button:disabled {
     opacity: 0.5;
     cursor: auto;
+}
+.material-icons {
+    font-size: 80px;
+    margin-right: 0px;
+    width: 80px;
+    vertical-align: middle;
 }

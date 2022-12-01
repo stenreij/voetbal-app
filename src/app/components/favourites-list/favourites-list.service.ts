@@ -20,21 +20,26 @@ export class FavouritesListService {
 
     }
 
+
     getFavouritesList() {
         return this.favouritesList;
     }
     getFavoritesListById(id: number) {
         return this.favouritesList.find(f => f.id === id);
     }
-    addFavouritesList(favourite: FavouritesList) {
-        this.favouritesList.push(favourite);
-    }
     deleteFavouritesList(favList: FavouritesList): void {
         this.favouritesList.splice(this.favouritesList.indexOf(favList), 1);
     }
 
-    updateFavouritesList(favList: FavouritesList): void {
-        const index = this.favouritesList.indexOf(favList);
-        this.favouritesList[index] = favList;
+    
+    addFavouritesList(name: string, description: string): void {
+        this.favouritesList.push(name && description ? new FavouritesList(name, this.favouritesList.length + 1, description) : new FavouritesList('Favourites ' + (this.favouritesList.length + 1), this.favouritesList.length + 1, 'Favourites ' + (this.favouritesList.length + 1) + ' description'));
+    }
+    updateFavouritesList(updatedList: FavouritesList): void {
+        let updatedLists = this.favouritesList.filter(
+            (f) => f.id !== updatedList.id
+            );
+        updatedLists.push(updatedList);
+        this.favouritesList = updatedLists;
     }
 }

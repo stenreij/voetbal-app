@@ -2,25 +2,29 @@
 
 <div class="container">
     <div class="grid">
-        <button class="button" [routerLink]="['/favouriteslist/add/form']">New List</button>
+        <button class="main-button" [routerLink]="['/favouriteslist/add/form']">New List</button>
         <div class="favourite-list-card" *ngFor="let favouritesList of favourites">
             <h3>
                 <a>
                     <span class="material-icons">list</span>
                 </a>
+            </h3>
+            <h3>
                 <a>
                     {{ favouritesList.name }}
-                </a>              
-                    <a>
-                        <button [title]="favouritesList.name + ' details'"
-                            [routerLink]="['/favouriteslist', favouritesList.id]">Details</button>
-                    </a>
-                    <a>
-                        <button [routerLink]="['/favouriteslist', favouritesList.id, 'update']">Edit</button>
-                    </a>
-                    <a>
-                        <button (click)="deleteFavouritesList(favouritesList)">Delete</button>
-                    </a>                
+                </a>
+            </h3>
+            <h3 class="button-items">
+                <a>
+                    <button [title]="favouritesList.name + ' details'"
+                        [routerLink]="['/favouriteslist', favouritesList.id]">Details</button>
+                </a>
+                <a>
+                    <button [routerLink]="['/favouriteslist', favouritesList.id, 'update']">Edit</button>
+                </a>
+                <a>
+                    <button (click)="deleteFavouritesList(favouritesList)">Delete</button>
+                </a>
             </h3>
         </div>
     </div>

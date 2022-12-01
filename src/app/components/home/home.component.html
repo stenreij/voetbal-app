@@ -3,33 +3,34 @@
 <div class="container">
   <div class="grid">
 
-    <div class="item-list-card">
+    <div class="item-list-card" [routerLink]="['/clublist']">
       <h3>
-        <a [routerLink]="['/clublist']">
+        <a>
           <h1><span class="material-icons md-60">shield</span>Browse Clubs</h1>
         </a>
       </h3>
     </div>
 
-    <div class="item-list-card">
+    <div class="item-list-card" [routerLink]="['/clublist']">
       <h3>
-        <a [routerLink]="['/clublist']">
+        <a>
           <h1><span class="material-icons md-60">directions_run</span>Browse Players</h1>
         </a>
       </h3>
     </div>
 
 
-    <div class="item-list-card">
+    <div class="item-list-card" [routerLink]="['/favouriteslist']">
       <h3>
-        <a [routerLink]="['/favourites']">
+        <a>
           <h1><span class="material-icons md-60">star_rate</span>Your Favourites</h1>
         </a>
       </h3>
     </div>
-    <div class="item-list-card">
+
+    <div class="item-list-card" [routerLink]="['/users']">
       <h3>
-        <a [routerLink]="['/users']">
+        <a>
           <h1><span class="material-icons md-60">person_add</span> Search Friends</h1>
         </a>
       </h3>
