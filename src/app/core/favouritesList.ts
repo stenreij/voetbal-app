@@ -1,7 +1,7 @@
 import { Club } from "./clubs";
-import { Player, players } from "./players";
 import { Favourites } from "./favourites";
 import { ClubsService } from "../components/club/clubs.service";
+import { PlayerService } from "../components/player/player.service";
 
 export class FavouritesList {
     name: string;

@@ -1,40 +1,29 @@
+import { DefaultTitleStrategy } from "@angular/router";
 import { Club } from "./clubs";
 import { Player } from "./players";
  
 export class User {
     id: number;
-    name: string;
+    userName: string;
+    firstName: string;
+    lastName: string;
     email: string;
     password: string;
-    isAdmin: boolean;
+    role: "admin" | "editor" | "user";
     friends: User[];
     favourites: Club[] | Player[];
 
 
-    constructor(id: number, name: string, email: string, password: string, isAdmin: boolean,) {
+    constructor(id: number, name: string, firstName: string, lastName: string, email: string, password: string, role: string) {
         this.id = id;
-        this.name = name;
+        this.userName = name;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.isAdmin = isAdmin;
+        this.role = role as "admin" | "editor" | "user"; 
         this.friends = [];
         this.favourites = [];
-    }
-
-    addFriend(friend: User) {
-        this.friends.push(friend);
-    }
-    removeFriend(friend: User) {
-        const index = this.friends.indexOf(friend);
-        if (index > -1) {
-            this.friends.splice(index, 1);
-        }
-    }
-    getFriends() {
-        return this.friends;
-    }
-    getFriend(id: number) {
-        return this.friends.find(friend => friend.id === id);
     }
 }
 

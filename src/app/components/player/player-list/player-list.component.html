@@ -1,0 +1,24 @@
+<h1>Players</h1>
+
+<div class="container">
+  <div class="grid">
+    <div class="player-list-card" *ngFor="let player of players">
+      <h3>
+        <a [title]="player.playerName + ' details'" [routerLink]="['/players', player.id]">
+          {{ player.playerName }}
+        </a>
+      </h3>
+
+      <p *ngIf="player.country">{{player.country}}, {{player.age}}</p>
+
+      <div class="button-thingy">
+        <select class="form-select">
+          <option class="option-item" *ngFor="let f of favourites" [value]="f.id">
+            {{ f.name }}
+          </option>
+        </select>
+        <button>Add Player</button>
+      </div>
+    </div>
+  </div>
+</div>

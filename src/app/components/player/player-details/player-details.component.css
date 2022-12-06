@@ -16,7 +16,7 @@
   row-gap: 50px;
 }
 
-.club-list-card {
+.player-list-card {
   width: 70%;
   height: wrap-content;
   background-color: #3a33439a;
@@ -26,19 +26,19 @@
   margin: 50px;
 }
 
-/* Card Header */
-.club-list-card h3 {
+/* Player Header */
+.player-list-card h3 {
   text-align: center;
   font-size: 24px;
 }
 
-/* Card Body */
-.club-list-card p {
+/* Player Body */
+.player-list-card p {
   text-align: center;
   font-size: 16px;
 }
 
-/* Hyperlink Club Name */
+/* Hyperlink Player Name */
 a {
   cursor: pointer;
   color: white;
@@ -80,6 +80,7 @@ button:disabled {
 
 h1 {
   text-align: center;
+  font-size: 40px;
 }
 
 p {
@@ -115,8 +116,8 @@ hr {
   justify-content: center;
   display: flex;
   margin: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 60px;
+  margin-bottom: 60px;
   height: 100px;
   width: 70%;
   border: 1px solid black;

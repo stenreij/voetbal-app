@@ -7,11 +7,12 @@ import { User } from "../../core/user";
 
 export class UserService {
     users = [
-        new User(1, 'Sten', 's@s.com', '1234', true),
-        new User(2, 'Kalle', 'k@k.com', '1234', false),
-        new User(3, 'Pelle', 'p@p.com', '1234', false),
-        new User(4, 'Lisa', 'l@l.com', '1234', false),
-        new User(5, 'Anna', 'a@a.com', '1234', false),
+        new User(1, 'Sten06',  'Sten', 'Reijerse', 's@s.com', '1234', 'admin'),
+        new User(2, 'Kalle070', 'Kalle', 'van de Visser', 'k@k.com', '1234', 'admin'),
+        new User(3, 'Jaapje',  'Jaap', 'van der Veen', 'j@j.com', '1234', 'editor'),
+        new User(4, 'Pietje',  'Piet', 'Post', 'p@p.com', '1234', 'user'),
+        new User(5, 'HenkDeTank', 'Henk', 'Harmsen', 'h@h.com', '1234', 'user'),
+        new User(6, 'AnnaX15', 'Anna', 'Bel', 'a@a.com', '1234', 'user'), 
     ]
 
     getUsers() {
@@ -26,8 +27,8 @@ export class UserService {
     getUser(id: number){
         return this.users.find(user => user.id === id);
     }
-    addUser(user: User) {
-        this.users.push(user);
+    addUser(username: string, password: string, email: string, firstName: string, lastName: string, role: string) {
+        this.users.push(new User(this.users.length + 1, username, firstName, lastName, email, password, role));
     }
     updateUser(user: User) {
         const index = this.users.indexOf(user);

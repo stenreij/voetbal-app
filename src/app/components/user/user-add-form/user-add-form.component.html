@@ -1,1 +1,38 @@
-<p>user-add-form works!</p>
+<h1>Add User</h1>
+
+<div class="container">
+    <div class="grid">
+        <div class="user-list-card">
+
+            <form [formGroup]="userListForm" class="form-list">
+                <div class="form-list-items">
+                    <label for="username">username: </label>
+                    <input id="username" type="text" formControlName="username" />
+                </div>
+                <div class="form-list-items">
+                    <label for="email">email: </label>
+                    <input id="email" type="text" formControlName="email" />
+                </div>
+                <div class="form-list-items">
+                    <label for="firstName">first name: </label>
+                    <input id="firstName" type="text" formControlName="firstName" />
+                </div>
+                <div class="form-list-items">
+                    <label for="lastName">last name: </label>
+                    <input id="lastName" type="text" formControlName="lastName" />
+                </div>
+                <div class="form-list-items">
+                    <label for="password">password: </label>
+                    <input id="password" type="text" formControlName="password" />
+                </div>
+                
+                <div class="button-class">
+                    <button type="button" (click)="addUser()" [routerLink]="['/users']">
+                        Add Favourites List
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

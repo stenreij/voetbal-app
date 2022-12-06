@@ -16,11 +16,11 @@
       <form class="form-list" [formGroup]="favouritesListUpdateForm">
         <div class="form-list-items">
           <label for="listName">Name: </label>
-          <input id="listName" type="text" formControlName="listName" placeholder="{{selectedFavouritesList.name}}"/>  
+          <input id="listName" type="text" formControlName="listName" [ngModel]="selectedFavouritesList!.name" value={{selectedFavouritesList.name}}/>  
         </div>
         <div class="form-list-items">
           <label for="description">Description: </label>
-          <textarea id="description" type="text" formControlName="description" [(ngModel)]="selectedFavouritesList!.description" value={{selectedFavouritesList.description}}></textarea>
+          <textarea id="description" type="text" formControlName="description" [ngModel]="selectedFavouritesList!.description" value={{selectedFavouritesList.description}}></textarea>
         </div>
         <div class="button-class">
           <button type="submit" (click)="onSubmit()" [routerLink]="['/favouriteslist']">

@@ -37,10 +37,18 @@ export class ClubsService {
     static clubs: any;
 
     constructor() {
-            
-        }
 
-        getClubs() {
-            return this.clubsList;
-        }
     }
+
+    getClubs() {
+        return this.clubsList;
+    }
+
+    getClubById(id: number): Club {
+        return this.clubsList.filter(club => club.id === id)[0];
+    }
+
+    addClubToFavorites(club: Club) {
+        this.clubsList.push(club);
+    }
+}

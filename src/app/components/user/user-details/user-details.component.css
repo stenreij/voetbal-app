@@ -3,11 +3,19 @@
     display: flex;
     width: 100%;
     grid-gap: 10px;
-    align-content: center;
     justify-content: center;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.grid-elements {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    row-gap: 50px;
+    margin-top: 60px;
+}
+
 .user-list-card {
     width: 70%;
     height: wrap-content;
@@ -17,11 +25,30 @@
     padding: 15px;
     margin: 50px;
 }
+
+.button-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    grid-gap: 10px;
+}
+
+.button-grid button {
+    height: fit-content;
+    width: fit-content;
+    padding: 20px;
+    margin: 15px;
+    display: flex;
+}
+
 /* Card Header */
 .user-list-card h3 {
     text-align: center;
     font-size: 24px;
+    margin: 25px;
 }
+
 /* Card Body */
 .user-list-card p {
     text-align: center;
@@ -34,9 +61,11 @@ a {
     text-align: center;
     text-decoration: none;
 }
+
 a:hover {
     opacity: 0.8;
 }
+
 /* Button */
 button {
     width: 20%;
@@ -54,22 +83,28 @@ button {
     margin-bottom: 50px;
     display: flex;
 }
+
 .button:hover,
 button:hover {
     opacity: 0.7;
     font-weight: normal;
 }
+
 .button:disabled,
 button:disabled {
     opacity: 0.5;
     cursor: auto;
 }
+
 h1 {
     text-align: center;
 }
+
 p {
     text-align: center;
 }
+
 hr {
     border: 1px solid #4d1295;
+    margin-top: 30px;
 }

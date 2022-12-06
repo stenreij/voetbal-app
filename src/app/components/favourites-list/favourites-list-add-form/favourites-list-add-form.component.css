@@ -74,6 +74,7 @@ button:disabled {
     opacity: 0.5;
     cursor: auto;
 }
+
 h1 {
     text-align: center;
 }
@@ -81,25 +82,31 @@ h1 {
 p {
     text-align: center;
 }
+
 .form-list {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     row-gap: 35px;
     padding: 20px;
     margin-left: 20px;
+    margin-top: 30px;
     align-content: center;
 }
-.form-list-items{
+
+.form-list-items {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     margin: 0px 20px 20px 0px;
     grid-gap: 25px;
 }
-label{
+
+label {
     font-size: 24px;
     font-weight: bold;
 }
-input, textarea{
+
+input,
+textarea {
     width: 100%;
     height: 200%;
     border-radius: 8px;
@@ -112,19 +119,22 @@ input, textarea{
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 .input:focus,
 input:focus {
     background: #4d1295b1;
     font-weight: normal;
     outline: none;
 }
+
 .textarea:focus,
 textarea:focus {
     background: #4d1295b1;
     font-weight: normal;
     outline: none;
 }
-.button-class{
+
+.button-class {
     display: flex;
     justify-content: center;
     align-items: center;

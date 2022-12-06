@@ -7,8 +7,9 @@
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-  }
-  /* Card */
+}
+
+/* Card */
 .favourite-list-card {
     display: grid;
     grid-template-columns: min-content 2fr 3fr;
@@ -21,11 +22,13 @@
     margin: 15px;
     align-items: center;
 }
+
 /* Card Header */
 .favourites-list-card h3 {
     font-size: 24px;
     text-align: left;
 }
+
 /* Card Body */
 a {
     color: white;
@@ -34,13 +37,16 @@ a {
     text-align: center;
     font-size: 24px;
 }
+
 h1 {
     text-align: center;
 }
+
 /* Button */
-.main-button{
+.main-button {
     width: 12%;
 }
+
 button {
     width: 20%;
     height: wrap-content;
@@ -53,16 +59,19 @@ button {
     background-color: #4d1295;
     color: white;
 }
+
 .button:hover,
 button:hover {
     opacity: 0.7;
     font-weight: normal;
 }
+
 .button:disabled,
 button:disabled {
     opacity: 0.5;
     cursor: auto;
 }
+
 .material-icons {
     font-size: 80px;
     margin-right: 0px;

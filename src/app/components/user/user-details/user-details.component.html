@@ -1,22 +1,32 @@
-<h1 [title]="selectedUser?.name"></h1>
+<h1 [title]="selectedUser?.userName"></h1>
 
 <div class="container">
   <div class="grid">
 
     <div class="user-list-card" *ngIf="selectedUser">
       <h1>
-        Details: {{ selectedUser.name }}
+        <div class="button-grid">
+        Details: {{ selectedUser.userName }}     
+          <button [routerLink]="['/users', selectedUser.id, 'update']">Edit Info</button>
+          <button (click)="deleteUser(selectedUser)" [routerLink]="['/users']">
+            Delete User
+          </button>
+        </div>
         <hr>
       </h1>
-      <div class="grid" *ngIf="selectedUser">
+      <div class="grid-elements" *ngIf="selectedUser">
         <h3>
           Id: {{ selectedUser.id }}
         </h3>
         <h3>
-            email: {{ selectedUser.email }}
+          Name: {{ selectedUser.firstName + '  ' + selectedUser.lastName }}
+        </h3>
+        
+        <h3>
+            Email: {{ selectedUser.email }}
         </h3>  
         <h3>
-            isAdmin: {{ selectedUser.isAdmin }}
+            Role: {{ selectedUser.role }}
             </h3>      
       </div>
 

@@ -9,18 +9,23 @@ import { User } from '../../../core/user';
   styleUrls: ['./user-details.component.css']
 })
 export class UserDetailsComponent implements OnInit {
-  UserService: UserService = new UserService;
-  User = this.UserService.getUsers();
+  users: User[] = [];
   selectedUser: User | undefined;
 
   ngOnInit(): void {
+    this.users = this.UserService.getUsers();
     const routeParams = this.route.snapshot.paramMap;
     const userIdFromRoute = Number(routeParams.get('userId'));
 
-    this.selectedUser = this.UserService.users.find(user => user.id === userIdFromRoute);
+    this.selectedUser = this.users.find(user => user.id === userIdFromRoute);
   }
 
   constructor(
     private route: ActivatedRoute,
-  ) { }
+    private UserService: UserService) { }
+  
+    deleteUser(user: User) {
+      this.UserService.deleteUser(user);
+    }
+
 }

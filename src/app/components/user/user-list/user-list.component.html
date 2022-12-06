@@ -14,7 +14,7 @@
                     {{ user.id }}
                 </a>
                 <a>
-                    {{ user.name }}
+                    {{ user.userName }}
                 </a>
                 <a>
                     {{ user.email }}
@@ -22,7 +22,7 @@
             </h3>
             <h3 class="button-items">
                 <a>
-                    <button [title]="user.name + ' details'" [routerLink]="['/users', user.id]">Details</button>
+                    <button [title]="user.userName + ' details'" [routerLink]="['/users', user.id]">Details</button>
                 </a>
                 <a>
                     <button [routerLink]="['/users', user.id, 'update']">Edit</button>

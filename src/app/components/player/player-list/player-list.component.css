@@ -12,7 +12,7 @@
 }
 
 /* Card */
-.club-list-card {
+.player-list-card {
     width: auto;
     height: wrap-content;
     background-color: #3a33439a;
@@ -24,7 +24,7 @@
 }
 
 /* Card Header */
-.club-list-card h3 {
+.player-list-card h3 {
     width: fit-content;
     display: inline-block;
     font-size: 24px;
@@ -32,14 +32,14 @@
 }
 
 /* Card Body */
-.club-list-card p {
+.player-list-card p {
     text-align: center;
     font-size: 16px;
     margin-top: 15px;
     margin-bottom: 25px;
 }
 
-/* Hyperlink Club Name */
+/* Hyperlink Player Name */
 a {
     cursor: pointer;
     color: white;

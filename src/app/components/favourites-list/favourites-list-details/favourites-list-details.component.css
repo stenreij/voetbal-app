@@ -8,12 +8,13 @@
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 .grid-elements {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
-  }
-  
+}
+
 .favourites-list-card {
     width: 70%;
     height: wrap-content;
@@ -23,16 +24,19 @@
     padding: 15px;
     margin: 50px;
 }
+
 /* Card Header */
 .favourites-list-card h3 {
     text-align: center;
     font-size: 24px;
 }
+
 /* Card Body */
 .user-list-card p {
     text-align: center;
     font-size: 16px;
 }
+
 /* Hyperlink FavouritesList */
 a {
     cursor: pointer;
@@ -40,9 +44,11 @@ a {
     text-align: center;
     text-decoration: none;
 }
+
 a:hover {
     opacity: 0.8;
 }
+
 /* Button */
 button {
     width: 25%;
@@ -57,29 +63,36 @@ button {
     color: white;
     display: flex;
 }
+
 .button:hover,
 button:hover {
     opacity: 0.7;
     font-weight: normal;
 }
+
 .button:disabled,
 button:disabled {
     opacity: 0.5;
     cursor: auto;
 }
-.button-grid{
+
+.button-grid {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px;
     grid-gap: 25px;
 }
+
 h1 {
     text-align: center;
 }
+
 p {
     text-align: center;
 }
+
 hr {
     border: 1px solid #4d1295;
+    margin-top: 30px;
 }

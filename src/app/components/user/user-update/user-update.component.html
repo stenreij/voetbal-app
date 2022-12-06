@@ -1,1 +1,41 @@
-<p>user-update works!</p>
+<h1 [title]="selectedUser?.userName"></h1>
+
+<div class="container">
+  <div class="grid">
+    <div class="user-list-card" *ngIf="selectedUser">
+      <h1>
+        {{ selectedUser.userName }}       
+        <hr />
+      </h1>
+
+      <form class="form-list" [formGroup]="userUpdateForm">
+        <div class="form-list-items">
+          <label for="username">Username: </label>
+          <input id="username" type="text" formControlName="username" [ngModel]="selectedUser!.userName" value={{selectedUser.userName}}/>  
+        </div>
+        <div class="form-list-items">
+          <label for="email">Email: </label>
+          <input id="email" type="text" formControlName="email" [ngModel]="selectedUser!.email" value={{selectedUser.email}}/>
+        </div>
+        <div class="form-list-items">
+            <label for="firstName">First name: </label>
+            <input id="firstName" type="text" formControlName="firstName" [ngModel]="selectedUser!.firstName" value={{selectedUser.firstName}}/>
+          </div>
+          <div class="form-list-items">
+            <label for="lastName">Last name: </label>
+            <input id="lastName" type="text" formControlName="lastName" [ngModel]="selectedUser!.lastName" value={{selectedUser.lastName}}/>
+          </div>
+          <div class="form-list-items">
+            <label for="password">Password: </label>
+            <input id="password" type="text" formControlName="password" [ngModel]="selectedUser!.password" value={{selectedUser.password}}/>
+          </div>
+        <div class="button-class">
+          <button type="submit" (click)="onSubmit()" [routerLink]="['/users']">
+            Update User
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
