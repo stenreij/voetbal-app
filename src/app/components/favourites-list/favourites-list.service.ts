@@ -35,11 +35,10 @@ export class FavouritesListService {
     addFavouritesList(name: string, description: string): void {
         this.favouritesList.push(name && description ? new FavouritesList(name, this.favouritesList.length + 1, description) : new FavouritesList('Favourites ' + (this.favouritesList.length + 1), this.favouritesList.length + 1, 'Favourites ' + (this.favouritesList.length + 1) + ' description'));
     }
-    updateFavouritesList(updatedList: FavouritesList): void {
-        let updatedLists = this.favouritesList.filter(
-            (f) => f.id !== updatedList.id
-            );
-        updatedLists.push(updatedList);
-        this.favouritesList = updatedLists;
+    updateFavouritesList(favList: FavouritesList): void {
+        const index = this.favouritesList.indexOf(favList);
+        if (index > -1) {
+            this.favouritesList[index] = favList;
+        }
     }
 }
